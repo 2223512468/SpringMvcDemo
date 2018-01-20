@@ -23,4 +23,12 @@ public class EbUploadController {
         System.out.println("name" + name);
         System.out.println("--" + image_desc);
     }
+
+
+    @RequestMapping(value = "/json", method = {RequestMethod.POST})
+    public void getJson(HttpServletRequest req, HttpServletResponse resp) {
+        String json = req.getParameter("json");
+        System.out.println("json" + json);
+    }
+
 }
